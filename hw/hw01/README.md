@@ -45,6 +45,8 @@ cd learncsh
 Замініть `nickname` на ваш логін у GitHub:
 
 ```bash
+git checkout main
+git pull origin main
 git checkout -b hw01/nickname
 ```
 
@@ -108,4 +110,3 @@ git push origin hw01/nickname
 ---
 
 ## 🚀 Успіхів у навчанні!
-
