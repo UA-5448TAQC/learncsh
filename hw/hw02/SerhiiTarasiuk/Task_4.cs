@@ -37,7 +37,7 @@
                 Console.WriteLine("One of the integers is negative.");
                 Console.ForegroundColor = ConsoleColor.Yellow;
             }
-            else if (intA == 0 || intB == 0)
+            else if (intA == 0 && intB == 0)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Your integers are ZEROs.");
