@@ -31,13 +31,13 @@
             Console.WriteLine("Please enter a second integer B:");
             int intB = ReadInt();
 
-            bool result;
+            bool isPositive;
 
             if (intA < 0 || intB < 0)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                result = false;
-                Console.WriteLine("One of the integers is negative. And Boolean result is {0}", result);
+                isPositive = false;
+                Console.WriteLine("One of the integers is negative. And Boolean result is {0}", isPositive);
                 Console.ForegroundColor = ConsoleColor.Yellow;
                
             }
@@ -50,8 +50,8 @@
             else
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                result = false;
-                Console.WriteLine("Integer A and Integer B are positive. And Boolean result is {0}", result);
+                isPositive = true;
+                Console.WriteLine("Integer A and Integer B are positive. And Boolean result is {0}", isPositive);
                 Console.ForegroundColor = ConsoleColor.Yellow;
             }
         }
