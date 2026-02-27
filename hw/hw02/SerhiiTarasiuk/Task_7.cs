@@ -30,13 +30,17 @@
 
             double radius = ReadRadius();
 
+            double length = 2 * Math.PI * radius;
+            double area = Math.PI * radius * radius;
+            double volume = (4.0 / 3.0) * Math.PI * radius * radius * radius;
+
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Console.WriteLine($"\n\nLets perform some calculations:\n" +
-                $"Length of the circle is " + $"{2 * Math.PI * radius}.\n" +    
-                $"Area of the circle is {Math.PI * radius * radius}.\n" +
-                $"Volume of the sphere is {4/3 * Math.PI * Math.Pow(radius, 3)}.");
-
+            Console.WriteLine($"Length: {length}");
+            Console.WriteLine($"Area: {area}");
+            Console.WriteLine($"Volume: {volume}");
+           
+            Console.ResetColor();
         }
     }
 }

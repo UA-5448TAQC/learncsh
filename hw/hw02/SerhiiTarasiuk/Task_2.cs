@@ -16,7 +16,9 @@
                 mood = Console.ReadLine();
             }
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("You are {0}.", mood);   
+            Console.WriteLine("You are {0}.", mood);
+
+            Console.ResetColor();
         }
     }
 }

@@ -59,6 +59,7 @@
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine($"\n\n Nice to meet you, {name}. You are {age} years old.");
 
+            Console.ResetColor();
         }
     }
 }

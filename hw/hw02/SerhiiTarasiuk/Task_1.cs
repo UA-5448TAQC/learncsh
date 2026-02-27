@@ -4,12 +4,31 @@
     {
         static void Main(string[] args)
         {
-            int a, b;
-            Console.ForegroundColor = ConsoleColor.Magenta;
+
+            static int ReadInt()
+            {
+                while (true)
+                {
+                    string input = Console.ReadLine();
+
+                    if (int.TryParse(input, out int result))
+                    {
+                        return result;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red; 
+                        Console.WriteLine("Invalid input. Please enter a valid integer:");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                    }
+                }
+            }
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("Enter a = ");
-            a = int.Parse(Console.ReadLine());
+            int a = ReadInt();
             Console.Write("Enter b = ");
-            b = int.Parse(Console.ReadLine());
+            int b = ReadInt();
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Performing calculations:");
@@ -25,8 +44,10 @@
             {
                 Console.Write("{0} / {1} = ", a, b);
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("......NO NO NO. \n This is a long story about dividing by zero... I don't have time to explain it.");
+                Console.WriteLine("This is a long story about dividing by zero...");
             }
+
+            Console.ResetColor();
         }
     }
 }

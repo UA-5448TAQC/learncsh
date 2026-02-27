@@ -38,6 +38,7 @@
 
             Console.WriteLine("You entered: A = {0}, B = {1}, C = {2}", charA, charB, charC);
 
+            Console.ResetColor();
         }
     }
 }

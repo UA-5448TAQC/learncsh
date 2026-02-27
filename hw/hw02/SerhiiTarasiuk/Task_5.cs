@@ -32,6 +32,8 @@
             Console.WriteLine("Performing calculations.... \n" +
                 "Your square's area is: " + (sideA * sideA) + "\n" +
                 "Your square's perimeter is: " + (4 * sideA));
+
+            Console.ResetColor();
         }
     }
 }

@@ -9,7 +9,7 @@
                 while (true)
                 {
                     string input = Console.ReadLine();
-                    
+
                     if (int.TryParse(input, out int result))
                     {
                         return result;
@@ -18,42 +18,33 @@
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("NO NO NO... Only digits. Try again");
-                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
             }
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            Console.WriteLine("Please enter a first integer A:");
+            Console.WriteLine("Please enter first integer A:");
             int intA = ReadInt();
 
-            Console.WriteLine("Please enter a second integer B:");
+            Console.WriteLine("Please enter second integer B:");
             int intB = ReadInt();
 
-            bool isPositive;
+            bool isPositive = intA > 0 && intB > 0;
 
-            if (intA < 0 || intB < 0)
-            {
+
+            Console.Write($"Both numbers are positive: ");
+
+            if (isPositive) {
                 Console.ForegroundColor = ConsoleColor.Green;
-                isPositive = false;
-                Console.WriteLine("One of the integers is negative. And Boolean result is {0}", isPositive);
-                Console.ForegroundColor = ConsoleColor.Yellow;
-               
-            }
-            else if (intA == 0 && intB == 0)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Your integers are ZEROs.");
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(isPositive);
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                isPositive = true;
-                Console.WriteLine("Integer A and Integer B are positive. And Boolean result is {0}", isPositive);
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(isPositive);
             }
+
+            Console.ResetColor();
         }
     }
 }
