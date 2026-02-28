@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="ArithmeticOperations/ArithmeticOperations.csproj" />
   <Project Path="BooleanExpression/BooleanExpression.csproj" />
+  <Project Path="NameAndAgeInteraction/NameAndAgeInteraction.csproj" />
   <Project Path="SimpleQuestion/SimpleQuestion.csproj" />
   <Project Path="SquareCalculations/SquareCalculations.csproj" />
   <Project Path="WorkingWithChar/WorkingWithChar.csproj" />
