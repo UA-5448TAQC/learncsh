@@ -8,7 +8,7 @@ internal class Program
         
         Console.WriteLine($"Length: {2 * Math.PI * circleRadius}");
         Console.WriteLine($"Area: {Math.PI * circleRadius * circleRadius}");
-        Console.WriteLine($"Volume: {4/3 * Math.PI * circleRadius * circleRadius * circleRadius}");
+        Console.WriteLine($"Volume: {4.0/3.0 * Math.PI * circleRadius * circleRadius * circleRadius}");
     }
 
     private static double EnterIntValue()
