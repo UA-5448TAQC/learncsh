@@ -11,12 +11,10 @@ namespace hw02_IrynaMykhailevych
     {
         static void Main()
         {
-
             int a = ReadInt("Enter a: ");
             int b = ReadInt("Enter b: ");
 
             CalculateAndPrintResults(a, b);
-
         }
 
         static int ReadInt(string message)
