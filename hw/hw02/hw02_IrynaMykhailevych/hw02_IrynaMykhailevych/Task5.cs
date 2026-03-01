@@ -10,7 +10,7 @@ namespace hw02_IrynaMykhailevych
     internal class Task5
 
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int squareSide = ReadInt("Enter side of square:");
 

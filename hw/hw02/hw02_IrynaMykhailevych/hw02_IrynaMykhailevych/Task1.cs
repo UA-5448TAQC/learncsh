@@ -9,39 +9,48 @@ namespace hw02_IrynaMykhailevych
 {
     internal class Task1
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
-            int a;
-            int b;
+            int a = ReadInt("Enter a: ");
+            int b = ReadInt("Enter b: ");
 
-            Console.WriteLine("Enter a: ");
-            a = Convert.ToInt32(Console.ReadLine());
+            CalculateAndPrintResults(a, b);
 
-            Console.WriteLine("Enter b: ");
-            b = Convert.ToInt32(Console.ReadLine());
+        }
 
+        static int ReadInt(string message)
+        {
+            Console.WriteLine(message);
+
+            string input = Console.ReadLine();
+            int result;
+
+            while (!int.TryParse(input, out result))
+            {
+                Console.WriteLine("Please enter a valid integer:");
+                input = Console.ReadLine();
+            }
+
+            return result;
+        }
+        
+        static void CalculateAndPrintResults(int a, int b)
+        {
             int sum = a + b;
             int subtraction = a - b;
             int multiplication = a * b;
-
             Console.WriteLine("Sum: " + sum);
             Console.WriteLine("Subtraction: " + subtraction);
             Console.WriteLine("Multiplication: " + multiplication);
-
             if (b == 0)
-
             {
                 Console.WriteLine("Division by zero is not allowed.");
             }
-
             else
             {
                 Console.WriteLine("Division: " + (a / (double)b));
             }
-
-            Console.ReadLine();
-
         }
     }
 }
