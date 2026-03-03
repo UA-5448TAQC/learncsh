@@ -2,7 +2,7 @@
 {
     internal class Task_2
     {
-         static void Main(string[] args)
+        static void Main(string[] args)
         {
             int num1 = ReadInt("Enter the first number: ");
             int num2 = ReadInt("Enter the second number: ");
@@ -28,9 +28,8 @@
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Invalid input.");
+                        Console.WriteLine("Invalid input. Only integer numbers are allowed.");
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Please enter a valid Integer:");
                     }
                 }
             }
