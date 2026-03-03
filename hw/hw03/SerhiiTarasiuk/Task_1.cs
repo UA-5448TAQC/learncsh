@@ -39,9 +39,8 @@
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Invalid input.");
+                        Console.WriteLine("Invalid input. Only float numbers.");
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Please enter a valid float:");
                     }
                 }
             }
