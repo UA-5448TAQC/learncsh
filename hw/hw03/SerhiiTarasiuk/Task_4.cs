@@ -11,8 +11,8 @@
             public override string ToString()
             {
                 return ($"Name: {Name}, Mark: {Mark}, Age: {Age}" +
-                    $" / \\__\r\n(    @\\___\r\n /         O\r\n/   (_____/\r\n/_____/   U" +
-                    $"\t\t\t\t\tWOOOF!");
+                    $"\n / \\__\r\n(    @\\___\r\n /         O\r\n/   (_____/\r\n/_____/   U" +
+                    $"\t\tWOOOF! WOOOF!");
             }
         }
 
@@ -26,6 +26,7 @@
 
             Console.WriteLine("\nDog information:");
             Console.WriteLine(myDog.ToString());
+            Console.Read();
         }
 
         static string ReadName()
