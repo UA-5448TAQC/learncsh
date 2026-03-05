@@ -1,7 +1,6 @@
 ﻿using System;
-using ConsoleAppTasks.Infrastructure;
 
-namespace ConsoleAppTasks.Tasks
+namespace ConsoleApp1
 {
     internal static class Task8
     {

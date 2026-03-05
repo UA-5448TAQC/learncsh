@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace ConsoleAppTasks.Infrastructure
+namespace ConsoleApp1
 {
     internal static class InputHelper
     {

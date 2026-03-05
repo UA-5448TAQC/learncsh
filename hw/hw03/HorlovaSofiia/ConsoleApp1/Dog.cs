@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppTasks.Models
+﻿namespace ConsoleApp1
 {
     internal struct Dog
     {

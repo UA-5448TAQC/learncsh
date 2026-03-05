@@ -1,7 +1,6 @@
 ﻿using System;
-using ConsoleAppTasks.Tasks;
 
-namespace ConsoleAppTasks
+namespace ConsoleApp1
 {
     internal class Program
     {
