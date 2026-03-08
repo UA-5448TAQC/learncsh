@@ -30,7 +30,7 @@ internal class Program
 
             ProgramHelpers.PrintTask(9, "Find sum of digits.\nExample: 365 → 3+6+5=14");
 
-            ProgramHelpers.PrintTask(10, "Check if number has only odd digits.\nExample: 1357 → true, 246 → false");
+            ProgramHelpers.PrintTask(0, "Check if number has only odd digits.\nExample: 1357 → true, 246 → false");
 
             Console.WriteLine("END - to exit ");
 
@@ -51,6 +51,35 @@ internal class Program
                     Task02.Run();
                     helpers.EndOfTask();
                     break;
+
+                case ConsoleKey.D3:
+                case ConsoleKey.NumPad3:
+                    Console.WriteLine("\n");
+                    Task03.Run();
+                    helpers.EndOfTask();
+                    break;
+
+                case ConsoleKey.D4:
+                case ConsoleKey.NumPad4:
+                    Console.WriteLine("\n");
+                    Task04.Run();
+                    helpers.EndOfTask();
+                    break;
+
+                case ConsoleKey.D5:
+                case ConsoleKey.NumPad5:
+                    Console.WriteLine("\n");
+                    Task05.Run();
+                    helpers.EndOfTask();
+                    break;
+
+                case ConsoleKey.D6:
+                case ConsoleKey.NumPad6:
+                    Console.WriteLine("\n");
+                    Task06.Run();
+                    helpers.EndOfTask();
+                    break;
+
 
                 case ConsoleKey.End:
                     return;

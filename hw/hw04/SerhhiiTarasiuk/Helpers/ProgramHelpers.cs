@@ -41,5 +41,24 @@ namespace HW_04.Helpers
                 }
             }
         }
+
+        public static string ReadNonEmptyString(string input)
+        {
+            while (true)
+            {
+                Console.WriteLine(input);
+                string result = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(result))
+                {
+                    return result;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Input cannot be empty. Please enter a valid string.");
+                    Console.ResetColor();
+                }
+            }
+        }
     }
 }
