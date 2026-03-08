@@ -9,11 +9,30 @@ internal class Program
 
         while (true)
         {
-            
-            Console.WriteLine("Choose task:");
-            Console.WriteLine("1 - Task01: Count 'a' 'o' 'i' 'e' in a string");
-            Console.WriteLine("2 - Task02");
-            Console.WriteLine("--- or press End to exit ---");
+
+            Console.WriteLine("Choose task by pressing button");
+
+            ProgramHelpers.PrintTask(1, "Read a string str.\nCalculate number of characters: 'a' 'o' 'i' 'e' (uppercase too).");
+
+            ProgramHelpers.PrintTask(2, "Enter month number (1–12).\nOutput number of days in this month.");
+
+            ProgramHelpers.PrintTask(3, "Enter 10 integers.\nIf first 5 are positive → sum.\nElse → product of last 5.");
+
+            ProgramHelpers.PrintTask(4, "Enter integers a and b.\nCount numbers in [a..b] divisible by 3.\nExample: 1..10 → 3 (3,6,9)");
+
+            ProgramHelpers.PrintTask(5, "Enter text.\nPrint every second character.\nExample: Hello → el");
+
+            ProgramHelpers.PrintTask(6, "Enter drink: coffee, tea, juice, water.\nPrint drink name and price (switch).");
+
+            ProgramHelpers.PrintTask(7, "Enter positive integers (stop on negative).\nFind average.\nExample: 1,6,3,9,-8 → (1+6+3+9)/4");
+
+            ProgramHelpers.PrintTask(8, "Check if year is leap.\n(divisible by 4, not by 100, except 400)");
+
+            ProgramHelpers.PrintTask(9, "Find sum of digits.\nExample: 365 → 3+6+5=14");
+
+            ProgramHelpers.PrintTask(10, "Check if number has only odd digits.\nExample: 1357 → true, 246 → false");
+
+            Console.WriteLine("END - to exit ");
 
             ConsoleKey key = Console.ReadKey(true).Key;
 
@@ -28,8 +47,9 @@ internal class Program
 
                 case ConsoleKey.D2:
                 case ConsoleKey.NumPad2:
-                    Console.Clear();
-                    //Task02.Run();
+                    Console.WriteLine("\n");
+                    Task02.Run();
+                    helpers.EndOfTask();
                     break;
 
                 case ConsoleKey.End:
@@ -40,7 +60,7 @@ internal class Program
                     Console.WriteLine("Unknown task.");
                     Console.ResetColor();
 
-                    Console.WriteLine("Press any key to retry.");
+                    Console.WriteLine("Press appropriate key to retry.");
                     Console.ReadKey(true);
                     break;
             }
