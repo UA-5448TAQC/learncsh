@@ -11,7 +11,14 @@ namespace HW_04.Helpers
         public void EndOfTask()
         {   
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("\n====Task Completed====");
+            Console.WriteLine("\n====Task Completed====\n");
+            Console.ResetColor();
+        }
+
+        public void StartOfTask()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n====Task Started====\n");
             Console.ResetColor();
         }
 

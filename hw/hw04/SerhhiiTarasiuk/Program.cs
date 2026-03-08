@@ -32,7 +32,9 @@ internal class Program
 
             ProgramHelpers.PrintTask(0, "Check if number has only odd digits.\nExample: 1357 → true, 246 → false");
 
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("END - to exit ");
+            Console.ResetColor();
 
             ConsoleKey key = Console.ReadKey(true).Key;
 
@@ -40,46 +42,73 @@ internal class Program
             {
                 case ConsoleKey.D1:
                 case ConsoleKey.NumPad1:
-                    Console.WriteLine("\n");
+                    helpers.StartOfTask();
                     Task01.Run();
                     helpers.EndOfTask();
                     break;
 
                 case ConsoleKey.D2:
                 case ConsoleKey.NumPad2:
-                    Console.WriteLine("\n");
+                    helpers.StartOfTask();
                     Task02.Run();
                     helpers.EndOfTask();
                     break;
 
                 case ConsoleKey.D3:
                 case ConsoleKey.NumPad3:
-                    Console.WriteLine("\n");
+                    helpers.StartOfTask();
                     Task03.Run();
                     helpers.EndOfTask();
                     break;
 
                 case ConsoleKey.D4:
                 case ConsoleKey.NumPad4:
-                    Console.WriteLine("\n");
+                    helpers.StartOfTask();
                     Task04.Run();
                     helpers.EndOfTask();
                     break;
 
                 case ConsoleKey.D5:
                 case ConsoleKey.NumPad5:
-                    Console.WriteLine("\n");
+                    helpers.StartOfTask();
                     Task05.Run();
                     helpers.EndOfTask();
                     break;
 
                 case ConsoleKey.D6:
                 case ConsoleKey.NumPad6:
-                    Console.WriteLine("\n");
+                    helpers.StartOfTask();
                     Task06.Run();
                     helpers.EndOfTask();
                     break;
 
+                case ConsoleKey.D7:
+                case ConsoleKey.NumPad7:
+                    helpers.StartOfTask();
+                    Task07.Run();
+                    helpers.EndOfTask();
+                    break;
+
+                case ConsoleKey.D8:
+                case ConsoleKey.NumPad8:
+                    helpers.StartOfTask();
+                    Task08.Run();
+                    helpers.EndOfTask();
+                    break;
+
+                case ConsoleKey.D9:
+                case ConsoleKey.NumPad9:
+                    helpers.StartOfTask();
+                    Task09.Run();
+                    helpers.EndOfTask();
+                    break;
+
+                case ConsoleKey.D0:
+                case ConsoleKey.NumPad0:
+                    helpers.StartOfTask();
+                    Task10.Run();
+                    helpers.EndOfTask();
+                    break;
 
                 case ConsoleKey.End:
                     return;
