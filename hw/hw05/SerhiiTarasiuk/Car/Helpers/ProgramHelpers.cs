@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HW_04.Helpers
+﻿namespace HW_04.Helpers
 {
     internal class ProgramHelpers
     {

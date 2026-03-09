@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Car
+﻿namespace Car
 {
-    internal class Car
+    internal class BaseCar
     {
         private string name;
         private string color;
@@ -18,14 +12,14 @@ namespace Car
             set { color = value; }
         }
 
-        public Car()
+        public BaseCar()
         {
             name = "Unknown";
             color = "white";
             price = 0;
         }
 
-        public Car(string name, string color, double price)
+        public BaseCar(string name, string color, double price)
         {
             this.name = name;
             this.color = color;
@@ -54,8 +48,15 @@ namespace Car
 
         public void Repaint(string newColor)
         {
-            HW_04.Helpers.ProgramHelpers.ReadNonEmptyString(newColor);
-            color = newColor;
+            if (string.Equals(color.ToLower(), "white"))
+            {
+                color = newColor;
+                Console.WriteLine("Car repainted successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Repaint is impossible.");
+            }
         }
 
         public override string ToString()
