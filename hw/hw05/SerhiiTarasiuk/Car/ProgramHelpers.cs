@@ -1,4 +1,4 @@
-﻿namespace HW_04.Helpers
+﻿namespace Helpers
 {
     internal class ProgramHelpers
     {

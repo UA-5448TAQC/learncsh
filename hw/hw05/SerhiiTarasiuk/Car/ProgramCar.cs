@@ -31,7 +31,7 @@
             Console.WriteLine(car2);
             Console.WriteLine(car3);
 
-            string newColor = HW_04.Helpers.ProgramHelpers.ReadNonEmptyString("Enter new color: ");
+            string newColor = HW_05.Helpers.ProgramHelpers.ReadNonEmptyString("Enter new color: ");
             car1.Repaint(newColor);
 
             Console.WriteLine("\n--- Car1 after repaint ---");

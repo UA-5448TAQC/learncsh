@@ -28,9 +28,9 @@
 
         public void Input()
         {
-            name = HW_04.Helpers.ProgramHelpers.ReadNonEmptyString("Enter car name: ");
-            color = HW_04.Helpers.ProgramHelpers.ReadNonEmptyString("Enter car color: ");
-            price = HW_04.Helpers.ProgramHelpers.ReadPositiveInt("Enter car price: ");
+            name =  Helpers.ProgramHelpers.ReadNonEmptyString("Enter car name: ");
+            color = Helpers.ProgramHelpers.ReadNonEmptyString("Enter car color: ");
+            price = Helpers.ProgramHelpers.ReadPositiveInt("Enter car price: ");
         }
 
         public void Print()
