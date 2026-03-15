@@ -1,6 +1,6 @@
 ﻿namespace Car
 {
-    internal class BaseCar
+    internal class Car
     {
         private string name;
         private string color;
@@ -12,14 +12,14 @@
             set { color = value; }
         }
 
-        public BaseCar()
+        public Car()
         {
             name = "Unknown";
             color = "white";
             price = 0;
         }
 
-        public BaseCar(string name, string color, double price)
+        public Car(string name, string color, double price)
         {
             this.name = name;
             this.color = color;

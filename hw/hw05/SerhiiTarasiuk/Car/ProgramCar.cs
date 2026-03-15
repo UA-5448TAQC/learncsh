@@ -31,16 +31,12 @@
             Console.WriteLine(car2);
             Console.WriteLine(car3);
 
-            Console.Write("\nEnter new color for car1: ");
-            string newColor = Console.ReadLine() ?? "";
+            string newColor = HW_04.Helpers.ProgramHelpers.ReadNonEmptyString("Enter new color: ");
             car1.Repaint(newColor);
 
             Console.WriteLine("\n--- Car1 after repaint ---");
             Console.WriteLine(car1);
 
-            Console.WriteLine("\n--- Comparing cars ---");
-            Console.WriteLine($"car1 == car2 : {car1 == car2}");
-            Console.WriteLine($"car2 == car3 : {car2 == car3}");
         }
     }
 }
