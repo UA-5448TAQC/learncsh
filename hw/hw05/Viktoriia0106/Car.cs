@@ -45,6 +45,13 @@ namespace ConsoleAppHW05
             price += price * x / 100;
         }
 
+        public void Repaint(string newColor)
+        {
+            if (this.color.ToLower() == "white")
+            {
+                this.color = newColor;
+            }
+        }
         public static bool operator ==(Car a, Car b)
         {
             if (ReferenceEquals(a, b)) return true;
