@@ -10,3 +10,4 @@ A simple C shell interpreter written in C. It supports basic command execution, 
 - [Домашнє завдання №4: Оператори та цикли](hw/hw04/README.md)
 - [Домашнє завдання №5: Класи та об'єкти](hw/hw05/README.md)
 - [Домашнє завдання №6: Інтерфейси та колекції](hw/hw06/README.md)
+- [Домашнє завдання №7: Абстрактні класи та поліморфізм](hw/hw07/README.md)
