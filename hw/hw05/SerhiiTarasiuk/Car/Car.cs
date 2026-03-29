@@ -5,6 +5,7 @@
         private string name;
         private string color;
         private double price;
+        public const string CompanyName = "DefaultCompany";
 
         public string Color
         {
@@ -28,16 +29,17 @@
 
         public void Input()
         {
-            name =  Helpers.ProgramHelpers.ReadNonEmptyString("Enter car name: ");
+            name = Helpers.ProgramHelpers.ReadNonEmptyString("Enter car name: ");
             color = Helpers.ProgramHelpers.ReadNonEmptyString("Enter car color: ");
-            price = Helpers.ProgramHelpers.ReadPositiveInt("Enter car price: ");
+            price = Helpers.ProgramHelpers.ReadPositiveDouble("Enter car price: ");
         }
 
         public void Print()
         {
             Console.WriteLine($"Name: {name}");
             Console.WriteLine($"Color: {color}");
-            Console.WriteLine($"Price: {price}");
+            Console.WriteLine($"Price: {price:F2}");
+            Console.WriteLine($"Company: {CompanyName}");
             Console.WriteLine();
         }
 
@@ -75,6 +77,40 @@
             Name: {name}, Color: {color}, Price: {price}";
         }
 
-       
+
+        public static bool operator == (Car? a, Car? b)
+        {
+            if (ReferenceEquals(a, b))
+            {
+                return true;
+            }
+
+            if (a is null || b is null)
+            {
+                return false;
+            }
+
+            return a.name == b.name && a.price == b.price;
+        }
+
+        public static bool operator !=(Car? a, Car? b)
+        {
+            return !(a == b);
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is Car other)
+            {
+                return this == other;
+            }
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(name, price);
+        }
     }
 }

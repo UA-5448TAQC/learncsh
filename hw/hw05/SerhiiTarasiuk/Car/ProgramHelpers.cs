@@ -40,5 +40,22 @@
                 }
             }
         }
+
+        public static double ReadPositiveDouble(string input)
+        {
+            double result;
+            while (true)
+            {
+                Console.WriteLine(input);
+                if (double.TryParse(Console.ReadLine(), out result) && result > 0)
+                {
+                    return result;
+                }
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid input. Please enter a valid positive number.");
+                Console.ResetColor();
+            }
+        }
     }
 }
