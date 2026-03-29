@@ -16,19 +16,21 @@ internal class Program
         Console.WriteLine($"Count of numbers divisible by 3: {count}");
     }
 
-    static int ReadInteger(string message)
+    private static int ReadInteger(string message)
     {
         while (true)
         {
-            Console.Write(message);
+            Console.WriteLine(message);
             if (int.TryParse(Console.ReadLine(), out int number))
+            {
                 return number;
+            }
 
             Console.WriteLine("Invalid input. Please enter a valid integer.");
         }
     }
 
-    static (int, int) EnsureOrder(int a, int b)
+    private static (int, int) EnsureOrder(int a, int b)
     {
         if (a > b)
         {
@@ -37,7 +39,7 @@ internal class Program
         return (a, b);
     }
 
-    static int CountDivisibleByThree(int start, int end)
+    private static int CountDivisibleByThree(int start, int end)
     {
         int count = 0;
 

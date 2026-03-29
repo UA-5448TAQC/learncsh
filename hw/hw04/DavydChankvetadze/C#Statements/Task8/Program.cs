@@ -12,20 +12,22 @@ internal class Program
         PrintResult(year, isLeapYear);
     }
 
-    static int ReadYear()
+    private static int ReadYear()
     {
-        int year;
-
         while (true)
         {
-            Console.Write("Enter a year: ");
+            Console.WriteLine("Enter a year: ");
 
-            if (int.TryParse(Console.ReadLine(), out year))
+            if (int.TryParse(Console.ReadLine(), out int year))
             {
                 if (year > 0)
+                {
                     return year;
+                }
                 else
+                {
                     Console.WriteLine("Year must be positive.");
+                }
             }
             else
             {
@@ -34,13 +36,13 @@ internal class Program
         }
     }
 
-    static bool IsLeapYear(int year)
+    private static bool IsLeapYear(int year)
     {
-        return (year % 4 == 0 && year % 100 != 0) ||
-               (year % 400 == 0);
+        return (year % 4 == 0 && year % 100 != 0)
+            || (year % 400 == 0);
     }
 
-    static void PrintResult(int year, bool isLeapYear)
+    private static void PrintResult(int year, bool isLeapYear)
     {
         if (isLeapYear)
         {

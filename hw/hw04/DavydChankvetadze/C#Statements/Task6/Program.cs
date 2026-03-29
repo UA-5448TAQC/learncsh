@@ -2,42 +2,43 @@
 
 internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         ArgumentNullException.ThrowIfNull(args);
 
-        string drink = ReadDrink();
-        double? price = GetDrinkPrice(drink);
+        var (drink, price) = ReadDrink();
 
-        if (price == null)
-        {
-            Console.WriteLine("Unknown drink.");
-            return;
-        }
-
-        PrintResult(drink, price.Value);
+        PrintResult(drink, price);
     }
 
-    static string ReadDrink()
+    private static (string, double) ReadDrink()
     {
-        string input;
-
-        while (true)
+        do
         {
-            Console.Write("Enter drink name (coffee, tea, juice, water): ");
-            input = Console.ReadLine();
+            Console.WriteLine("Enter drink name (coffee, tea, juice, water): ");
+
+            string input = Console.ReadLine() ?? string.Empty;
 
             if (string.IsNullOrWhiteSpace(input))
             {
-                Console.WriteLine("Input cannot be empty.");
+                Console.WriteLine("Invalid input. Please enter a valid drink.");
                 continue;
             }
 
-            return input.ToLower();
+            string drink = input.ToLower();
+            double? price = GetDrinkPrice(drink);
+
+            if (price != null)
+            {
+                return (drink, price!.Value);
+            }
+
+            Console.WriteLine("Unknown drink. Please try again.");
         }
+        while (true);
     }
 
-    static double? GetDrinkPrice(string drink)
+    private static double? GetDrinkPrice(string drink)
     {
         return drink switch
         {
@@ -49,7 +50,7 @@ internal class Program
         };
     }
 
-    static void PrintResult(string drink, double price)
+    private static void PrintResult(string drink, double price)
     {
         Console.WriteLine("\nDrink: " + drink);
         Console.WriteLine("Price: $" + price);

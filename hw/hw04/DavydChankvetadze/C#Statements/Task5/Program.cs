@@ -2,35 +2,39 @@
 
 internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         ArgumentNullException.ThrowIfNull(args);
 
-        string text = ReadNonEmptyString("Enter a string: ");
-        PrintEverySecondCharacter(text);
+        string str = EnterText();
+        PrintEverySecondCharacter(str);
     }
 
-    static string ReadNonEmptyString(string message)
+    private static string EnterText()
     {
-        string input;
-
         do
         {
-            Console.Write(message);
-            input = Console.ReadLine();
-        }
-        while (string.IsNullOrWhiteSpace(input));
+            Console.WriteLine($"Enter the text:");
 
-        return input;
+            string str = Console.ReadLine() ?? string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(str))
+            {
+                return str;
+            }
+
+            Console.WriteLine("Invalid input. Please enter a valid text.");
+        }
+        while (true);
     }
 
-    static void PrintEverySecondCharacter(string text)
+    private static void PrintEverySecondCharacter(string str)
     {
         Console.Write("Every second character: ");
 
-        for (int i = 1; i < text.Length; i += 2)
+        for (int i = 1; i < str.Length; i += 2)
         {
-            Console.Write(text[i]);
+            Console.Write(str[i]);
         }
     }
 }

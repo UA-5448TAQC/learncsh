@@ -11,7 +11,7 @@ internal class Program
         PrintAverage(sum, count);
     }
 
-    static (int sum, int count) ReadAndProcessNumbers()
+    private static (int sum, int count) ReadAndProcessNumbers()
     {
         int sum = 0;
         int count = 0;
@@ -27,7 +27,9 @@ internal class Program
             }
 
             if (number < 0)
+            {
                 break;
+            }
 
             if (number > 0)
             {
@@ -39,7 +41,7 @@ internal class Program
         return (sum, count);
     }
 
-    static void PrintAverage(int sum, int count)
+    private static void PrintAverage(int sum, int count)
     {
         if (count > 0)
         {

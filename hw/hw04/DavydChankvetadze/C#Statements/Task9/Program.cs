@@ -12,21 +12,21 @@ internal class Program
         Console.WriteLine($"Sum of digits: {sum}");
     }
 
-    static int ReadInteger()
+    private static int ReadInteger()
     {
-
         while (true)
         {
             Console.Write("Enter an integer number: ");
 
             if (int.TryParse(Console.ReadLine(), out int number))
+            {
                 return number;
-
+            }
             Console.WriteLine("Invalid input. Please enter a valid integer.");
         }
     }
 
-    static int CalculateDigitSum(int number)
+    private static int CalculateDigitSum(int number)
     {
         number = Math.Abs(number);
         int sum = 0;
