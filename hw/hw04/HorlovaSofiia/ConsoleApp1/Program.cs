@@ -15,9 +15,11 @@ namespace ConsoleApp1
             Task7.Run();
             Task8.Run();
             Task9.Run();
+            Task10.Run();
 
             Console.WriteLine();
-            Console.WriteLine("All tasks completed. Press any key to exit...");
+            ConsoleHelper.WriteInfo($"You completed {InputHelper.completedTasks} tasks!");
+            Console.WriteLine("Done. Press any key...");
             Console.ReadKey();
         }
     }
