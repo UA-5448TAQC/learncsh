@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="FloatNumbersInRange/FloatNumbersInRange.csproj" Id="ae996582-2c70-4312-801d-89da80514c15" />
+  <Project Path="GreetingByHour/GreetingByHour.csproj" Id="18d4beaa-1cb7-4e9a-b1b7-5352c7b1bb56" />
+  <Project Path="HTTPErrorEnum/HTTPErrorEnum.csproj" Id="02dbd1f3-cc82-4d55-ae12-8e877759b57a" />
+  <Project Path="MaxAndMinOfIntegers/MaxAndMinOfIntegers.csproj" Id="f26c94c5-ef50-4fc2-a7a7-5d13875f9018" />
+  <Project Path="StructDog/StructDog.csproj" Id="c907fce6-ac32-4ac7-8e27-85217fd6832d" />
+  <Project Path="StructRGB/StructRGB.csproj" Id="aec82d5f-1365-472c-91f6-18a6ad9209c0" />
+  <Project Path="SumOfFirstTwoDigitsAfterDecimalPoint/SumOfFirstTwoDigitsAfterDecimalPoint.csproj" Id="bec0889f-1fb6-4a3b-a6d0-1780d0300c9e" />
+  <Project Path="TestCaseStatusEnum/TestCaseStatusEnum.csproj" Id="fa96e781-c501-42bb-b0de-7ad6e98811de" />
+  <Project Path="ValidDateCheck/ValidDateCheck.csproj" Id="f2d83dd7-eef3-44c0-bf21-d87bbf305c2f" />
+</Solution>
