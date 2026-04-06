@@ -11,3 +11,6 @@ A simple C shell interpreter written in C. It supports basic command execution, 
 - [Домашнє завдання №5: Класи та об'єкти](hw/hw05/README.md)
 - [Домашнє завдання №6: Інтерфейси та колекції](hw/hw06/README.md)
 - [Домашнє завдання №7: Абстрактні класи та поліморфізм](hw/hw07/README.md)
+- [Домашнє завдання №8: Обробка виключень та робота з файлами та директоріями](hw/hw08/README.md)
+- [Домашнє завдання №9: Композиція та агрегація + Unit Testing](hw/hw09/README.md)
+- [Домашнє завдання №10: Розширені теми C#](hw/hw10/README.md)
