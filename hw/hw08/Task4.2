@@ -1,0 +1,24 @@
+﻿namespace Task42
+    internal class Program
+{
+    static void Main()
+    {
+        try
+        {
+            string text = File.ReadAllText("data.txt");
+
+            File.WriteAllText("rez.txt", text);
+
+            Console.WriteLine("File copied successfully!");
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine("File data.txt not found!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
+}

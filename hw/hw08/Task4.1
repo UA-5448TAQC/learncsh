@@ -1,0 +1,31 @@
+﻿namespace Task41
+    internal class Program
+    {
+        static void Main()
+        {
+            try
+            {
+                using (StreamReader reader = new StreamReader("data.txt"))
+                using (StreamWriter writer = new StreamWriter("rez.txt"))
+                {
+                    string line;
+
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        writer.WriteLine(line);
+                    }
+                }
+
+                Console.WriteLine("File copied successfully!");
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("File data.txt not found!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+    }
+}
