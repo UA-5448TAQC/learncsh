@@ -1,0 +1,41 @@
+﻿namespace Task1
+{
+    public class Point
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+        public Point(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public override string ToString() //ToString() → returns point in format
+        {
+            return $"({X},{Y})";
+        }
+
+        public double DistanceTo(Point p)  //DistanceTo(Point other) → returns distance between two points
+
+        {
+            double dx = X - p.X;
+            double dy = Y - p.Y;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
+        class Program
+        {
+            static void Main()
+            {
+                Point p1 = new Point(1, 2);
+                Point p2 = new Point(4, 6);
+
+                Console.WriteLine($"Point 1: {p1}");
+                Console.WriteLine($"Point 2: {p2}");
+
+                double distance = p1.DistanceTo(p2);
+
+                Console.WriteLine($"Distance: {distance}");
+            }
+        }
+    }
+}
