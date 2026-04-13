@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Task1ClassCar/Task1ClassCar.csproj" />
+  <Project Path="Task2ClassPerson/Task2ClassPerson.csproj" />
+</Solution>
