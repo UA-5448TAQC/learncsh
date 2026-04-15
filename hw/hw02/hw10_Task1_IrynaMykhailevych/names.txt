@@ -1,0 +1,3 @@
+Alpha: Area = 78.54, Perimeter = 31.42
+Beta: Area = 12.57, Perimeter = 12.57
+Gamma: Area = 36.00, Perimeter = 24.00

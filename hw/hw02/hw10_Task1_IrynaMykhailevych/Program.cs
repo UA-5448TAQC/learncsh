@@ -1,0 +1,47 @@
+﻿namespace hw10_Task1_IrynaMykhailevych
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            List<Shape> shapes = new List<Shape>
+            {
+                new Circle("Alpha", 5),
+                new Circle("Echo", 3),
+                new Circle("Beta", 2),
+                new Square("Box", 4),
+                new Square("Gamma", 6),
+                new Square("One", 1)
+            };
+
+            var filteredShapes = shapes.Where(s => s.Area() >= 10 && s.Area() <= 100);
+
+            Console.WriteLine("Shapes with area [10, 100]:");
+
+            foreach (var shape in filteredShapes)
+            {
+                Console.WriteLine($"{shape.Name}: Area = {shape.Area():F2}, Perimeter = {shape.Perimeter():F2}");
+            }
+
+            var filteredLines = filteredShapes
+                .Select(s => $"{s.Name}: Area = {s.Area():F2}, Perimeter = {s.Perimeter():F2}");
+
+            File.WriteAllLines("shapes.txt", filteredLines);
+
+            var filteredNames = shapes
+                .Where(s => s.Name.ToLower().Contains("a"))
+                .Select(s => $"{s.Name}: Area = {s.Area():F2}, Perimeter = {s.Perimeter():F2}");
+
+            File.WriteAllLines("names.txt", filteredNames);
+
+            shapes.RemoveAll(s => s.Perimeter() < 5);
+
+            Console.WriteLine("\nShapes after removing small perimeter:");
+
+            foreach (var shape in shapes)
+            {
+                Console.WriteLine($"{shape.Name}: Area = {shape.Area():F2}, Perimeter = {shape.Perimeter():F2}");
+            }
+        }
+    }
+}
