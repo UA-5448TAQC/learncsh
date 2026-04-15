@@ -1,0 +1,5 @@
+Alpha: Area = 78.54, Perimeter = 31.42
+Echo: Area = 28.27, Perimeter = 18.85
+Beta: Area = 12.57, Perimeter = 12.57
+Box: Area = 16.00, Perimeter = 16.00
+Gamma: Area = 36.00, Perimeter = 24.00
