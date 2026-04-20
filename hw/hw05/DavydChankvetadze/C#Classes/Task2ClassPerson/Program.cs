@@ -1,109 +1,6 @@
-﻿namespace Task2ClassPerson;
+﻿using Task2ClassPerson.Entities;
 
-internal class Person
-{
-    private string _name;
-    private DateTime _birthYear;
-
-    public string Name
-    {
-        get { return _name; }
-    }
-
-    public DateTime BirthYear
-    {
-        get { return _birthYear; }
-    }
-
-    public Person()
-    {
-        _name = "Unknown";
-        _birthYear = DateTime.MinValue;
-    }
-
-    public Person(string name, DateTime birthYear)
-    {
-        _name = name;
-        _birthYear = birthYear;
-    }
-
-    public int Age()
-    {
-        if (_birthYear == DateTime.MinValue)
-            return 0;
-
-        int age = DateTime.Now.Year - _birthYear.Year;
-
-        if (DateTime.Now.DayOfYear < _birthYear.DayOfYear)
-            age--;
-
-        return age;
-    }
-
-    public void Input()
-    {
-        Console.Write("Enter name: ");
-        _name = Console.ReadLine();
-
-        while (true)
-        {
-            Console.Write("Enter birth date (yyyy-mm-dd): ");
-            if (DateTime.TryParse(Console.ReadLine(), out DateTime birthDate))
-            {
-                _birthYear = birthDate;
-                break;
-            }
-
-            Console.WriteLine("Invalid date. Please enter a valid date.");
-        }
-    }
-
-    public void ChangeName(string newName)
-    {
-        _name = newName;
-    }
-
-    public override string ToString()
-    {
-        return $"Name: {_name}, Age: {Age()}";
-    }
-
-    public void Output()
-    {
-        Console.WriteLine(ToString());
-    }
-
-    public override bool Equals(object obj)
-    {
-        if (obj is Person other)
-        {
-            return _name == other._name;
-        }
-
-        return false;
-    }
-
-    public override int GetHashCode()
-    {
-        return _name != null ? _name.GetHashCode() : 0;
-    }
-
-    public static bool operator ==(Person left, Person right)
-    {
-        if (ReferenceEquals(left, right))
-            return true;
-
-        if (left is null || right is null)
-            return false;
-
-        return left._name == right._name;
-    }
-
-    public static bool operator !=(Person left, Person right)
-    {
-        return !(left == right);
-    }
-}
+namespace Task2ClassPerson;
 
 internal class Program
 {
@@ -115,7 +12,7 @@ internal class Program
         {
             people[i] = new Person();
         }
-
+        
         Console.WriteLine("Enter data for 6 persons:\n");
 
         for (int i = 0; i < people.Length; i++)
@@ -126,23 +23,23 @@ internal class Program
         }
 
         Console.WriteLine("Persons information:");
-        for (int i = 0; i < people.Length; i++)
+        foreach (Person person in people)
         {
-            people[i].Output();
+            person.Output();
         }
 
-        for (int i = 0; i < people.Length; i++)
+        foreach (Person person in people)
         {
-            if (people[i].Age() < 16)
+            if (person.Age() < 16)
             {
-                people[i].ChangeName("Very Young");
+                person.ChangeName("Very Young");
             }
         }
 
         Console.WriteLine("\nUpdated information:");
-        for (int i = 0; i < people.Length; i++)
+        foreach (Person person in people)
         {
-            people[i].Output();
+            person.Output();
         }
 
         Console.WriteLine("\nPersons with the same names:");
