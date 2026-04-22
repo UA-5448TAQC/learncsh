@@ -1,0 +1,6 @@
+﻿This is a test file
+var x = 10
+Hello world
+Another line
+var name = "test"
+Short
